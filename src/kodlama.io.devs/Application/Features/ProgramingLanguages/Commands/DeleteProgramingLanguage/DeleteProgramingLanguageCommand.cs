@@ -26,8 +26,6 @@ namespace Application.Features.ProgramingLanguages.Commands.DeleteProgramingLang
 
             public async Task<DeletedProgramingLanguageDTO> Handle(DeleteProgramingLanguageCommand request, CancellationToken cancellationToken)
             {
-                await _programingLanguageBusinessRules.ProgramingLanguageNameCanNotBeDuplicatedWhenInserted(request.Name);
-
                 ProgramingLanguage mappedProgramingLanguage = _mapper.Map<ProgramingLanguage>(request);
                 ProgramingLanguage deletedProgramingLanguage = await _programingLanguageRepository.DeleteAsync(mappedProgramingLanguage);
                 DeletedProgramingLanguageDTO deletedProgramingLanguageDTO = _mapper.Map<DeletedProgramingLanguageDTO>(deletedProgramingLanguage);
