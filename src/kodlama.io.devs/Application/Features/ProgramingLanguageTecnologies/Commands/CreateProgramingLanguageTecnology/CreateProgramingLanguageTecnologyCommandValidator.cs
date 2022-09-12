@@ -1,12 +1,13 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using FluentValidation;
 
 namespace Application.Features.ProgramingLanguageTecnologies.Commands.CreateProgramingLanguageTecnology
 {
-    internal class CreateProgramingLanguageTecnologyCommandValidator
+    public class CreateProgramingLanguageTecnologyCommandValidator : AbstractValidator<DeleteProgramingLanguageTecnologyCommand>
     {
+        public CreateProgramingLanguageTecnologyCommandValidator()
+        {
+            RuleFor(x => x.Name).NotEmpty();
+            RuleFor(x => x.Name).MinimumLength(2);
+        }
     }
 }

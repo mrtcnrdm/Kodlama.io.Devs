@@ -18,15 +18,15 @@ namespace Application.Features.ProgramingLanguageTecnologies.Profiles
     {
         public MappingProfiles()
         {
-            CreateMap<ProgramingLanguageTecnology, CreatedProgramingLanguageTecnologyDTO>().ReverseMap();
-            CreateMap<ProgramingLanguageTecnology, CreateProgramingLanguageTecnologyCommand>().ReverseMap();
+            CreateMap<ProgramingLanguageTecnology, DeleteProgramingLanguageTecnologyDTO>().ReverseMap();
+            CreateMap<ProgramingLanguageTecnology, Commands.CreateProgramingLanguageTecnology.DeleteProgramingLanguageTecnologyCommand>().ReverseMap();
             CreateMap<IPaginate<ProgramingLanguageTecnology>, ProgramingLanguageTecnologyListModel>().ReverseMap();
             CreateMap<ProgramingLanguageTecnology, ProgramingLanguageTecnologyListDTO>().ReverseMap();
             CreateMap<ProgramingLanguageTecnology, ProgramingLanguageTecnologyGetByIdDTO>().ReverseMap();
             CreateMap<ProgramingLanguageTecnology, UpdatedProgramingLanguageTecnologyDTO>().ReverseMap();
             CreateMap<ProgramingLanguageTecnology, UpdateProgramingLanguageTecnologyCommand>().ReverseMap();
             CreateMap<ProgramingLanguageTecnology, DeleteProgramingLanguageTecnologyDTO>().ReverseMap();
-            CreateMap<ProgramingLanguageTecnology, DeleteProgramingLanguageTecnologyCommand>().ReverseMap();
+            CreateMap<ProgramingLanguageTecnology, Commands.DeleteProgramingLanguageTecnology.DeleteProgramingLanguageTecnologyCommand>().ReverseMap();
         }
 
     }
